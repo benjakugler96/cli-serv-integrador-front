@@ -50,7 +50,14 @@ const Login = () => {
 				<FormElement>
 					<FormLabel>Nombre Empresa</FormLabel>
 					<FormInput
-						name='name'
+						name='businessName'
+						type='text'
+						onChange={onInputChange}></FormInput>
+				</FormElement>
+				<FormElement>
+					<FormLabel>CUIT</FormLabel>
+					<FormInput
+						name='cuit'
 						type='text'
 						onChange={onInputChange}></FormInput>
 				</FormElement>
