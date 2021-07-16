@@ -4,7 +4,7 @@ const baseURL = 'https://cli-serv-grupo1.herokuapp.com';
 const axiosInstance = axios.create({
 	baseURL,
 	headers: {
-		'content-type': 'application/octet-stream',
+		Authorization: `Bearer `,
 	},
 });
 

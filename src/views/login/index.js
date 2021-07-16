@@ -32,9 +32,13 @@ const Login = () => {
 		if (!data.success) {
 			return setError(true);
 		}
-		const { token } = data;
-		sessionStorage.setItem('token', token);
-		history.push('/');
+		const { token, role } = data;
+		if (role === 'admin' || role === 'secretaria') {
+			sessionStorage.setItem('token', token);
+			history.push('/');
+		} else {
+			setError(true);
+		}
 	};
 
 	const onInputChange = ({ target = {} }) => {
